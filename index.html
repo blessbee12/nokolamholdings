@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base target="_self">
+  <title>Home | Noko Lam Holdings</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Preline UI -->
+  <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Custom animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    
+    /* Smooth transitions */
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+    
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      .dark\:bg-gray-900 { background-color: #111827; }
+      .dark\:text-white { color: #fff; }
+      .dark\:bg-gray-800 { background-color: #1f2937; }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-all">
+  <!-- Header -->
+  <header class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="flex items-center space-x-2" id="logo-link">
+        <i class="fas fa-building text-2xl"></i>
+        <h1 class="text-xl md:text-2xl font-bold">Noko Lam Holdings</h1>
+      </a>
+      
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          <li><a href="#" class="nav-link font-semibold hover:text-blue-200 transition-all active">Home</a></li>
+          <li><a href="#" class="nav-link font-semibold hover:text-blue-200 transition-all">About Us</a></li>
+          <li><a href="#" class="nav-link font-semibold hover:text-blue-200 transition-all">Services</a></li>
+          <li><a href="#" class="nav-link font-semibold hover:text-blue-200 transition-all">Policies</a></li>
+          <li><a href="#" class="nav-link font-semibold hover:text-blue-200 transition-all">Quality</a></li>
+          <li><a href="#" class="nav-link font-semibold hover:text-blue-200 transition-all">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-800">
+      <ul class="flex flex-col space-y-3 p-4">
+        <li><a href="#" class="nav-link block py-2 hover:text-blue-200 transition-all active">Home</a></li>
+        <li><a href="#" class="nav-link block py-2 hover:text-blue-200 transition-all">About Us</a></li>
+        <li><a href="#" class="nav-link block py-2 hover:text-blue-200 transition-all">Services</a></li>
+        <li><a href="#" class="nav-link block py-2 hover:text-blue-200 transition-all">Policies</a></li>
+        <li><a href="#" class="nav-link block py-2 hover:text-blue-200 transition-all">Quality</a></li>
+        <li><a href="#" class="nav-link block py-2 hover:text-blue-200 transition-all">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center fade-in">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6 delay-1">Welcome to Noko Lam Holdings</h2>
+        <p class="text-lg md:text-xl mb-8 delay-2">Your trusted partner in construction, general supplies, and maintenance across Botswana and South Africa</p>
+        <div class="delay-3">
+          <a href="#" class="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-blue-100 transition-all transform hover:scale-105 shadow-lg" id="cta-button">Get a Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Our Core Services</h2>
+        <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">Comprehensive solutions tailored to your business needs</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-2 fade-in delay-1">
+          <div class="text-blue-600 dark:text-blue-400 mb-4">
+            <i class="fas fa-hammer text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Construction</h3>
+          <p class="text-gray-600 dark:text-gray-300">Full-service construction solutions from planning to completion with the highest quality standards.</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-2 fade-in delay-2">
+          <div class="text-blue-600 dark:text-blue-400 mb-4">
+            <i class="fas fa-truck text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">General Supplies</h3>
+          <p class="text-gray-600 dark:text-gray-300">Reliable supply chain solutions with a wide range of quality materials and equipment.</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-2 fade-in delay-3">
+          <div class="text-blue-600 dark:text-blue-400 mb-4">
+            <i class="fas fa-tools text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Maintenance</h3>
+          <p class="text-gray-600 dark:text-gray-300">Professional maintenance services to keep your facilities operating at peak efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 fade-in">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+               alt="Noko Lam Holdings Team" 
+               class="rounded-xl shadow-lg w-full h-auto object-cover"
+               loading="lazy">
+        </div>
+        <div class="md:w-1/2 fade-in delay-1">
+          <h2 class="text-2xl md:text-3xl font-bold mb-6">About Noko Lam Holdings</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Founded with a vision to transform the construction and supply industry in Southern Africa, Noko Lam Holdings has grown to become a trusted name in Botswana and South Africa.</p>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">Our commitment to quality, reliability, and customer satisfaction sets us apart in the industry. We combine local expertise with international standards to deliver exceptional results.</p>
+          <a href="#" class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-all" id="about-button">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">What Our Clients Say</h2>
+        <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">Trusted by businesses across Southern Africa</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md fade-in delay-1">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 mr-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">"Noko Lam Holdings delivered our construction project on time and within budget. Their attention to detail was impressive."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-semibold">Tebogo Molefe</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">CEO, Molefe Enterprises</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md fade-in delay-2">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 mr-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">"Their maintenance team is highly professional. We've been using their services for 3 years with no complaints."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-semibold">Lerato Kgosi</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Facilities Manager, BHC Ltd</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md fade-in delay-3">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 mr-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">"Reliable supplies with competitive pricing. They've become our go-to supplier for all construction materials."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-semibold">David van Wyk</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Procurement Director, BuildRight SA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-blue-900 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-3xl mx-auto fade-in">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
+        <p class="text-lg mb-8">Contact us today for a free consultation and quote. Our team is ready to assist you with your construction, supply, or maintenance needs.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#" class="bg-white text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-blue-100 transition-all" id="contact-button">Contact Us</a>
+          <a href="#" class="bg-transparent border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-blue-900 transition-all" id="call-button">
+            <i class="fas fa-phone mr-2"></i> +267 123 4567
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">Noko Lam Holdings</h3>
+          <p class="text-gray-400 mb-4">Building excellence across Botswana and South Africa since 2010.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-all"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Home</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-all">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Services</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Projects</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div>
+          <h4 class="font-semibold mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Construction</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-all">General Supplies</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Maintenance</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Consulting</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Project Management</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold mb-4">Contact Us</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+              <span>123 Business Park, Gaborone, Botswana</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-3"></i>
+              <span>+267 123 4567</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3"></i>
+              <span>info@nokolam.co.bw</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2023 Noko Lam Holdings. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Handle all navigation with JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      // Close mobile menu when clicking a link
+      const mobileLinks = document.querySelectorAll('#mobile-menu .nav-link');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          mobileMenu.classList.add('hidden');
+          // In a real app, you would navigate to the page here
+          console.log('Navigating to:', this.textContent.trim());
+        });
+      });
+      
+      // Handle all anchor clicks
+      const links = document.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          if (this.getAttribute('href') !== '#') {
+            e.preventDefault();
+            // In a real app, you would navigate to the page here
+            console.log('Navigating to:', this.textContent.trim());
+          }
+        });
+      });
+      
+      // Add active class to current page link
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        if (link.classList.contains('active')) {
+          link.classList.add('text-blue-300');
+        }
+      });
+      
+      // CTA button animation
+      const ctaButton = document.getElementById('cta-button');
+      if (ctaButton) {
+        ctaButton.addEventListener('mouseenter', function() {
+          this.classList.add('shadow-xl');
+        });
+        ctaButton.addEventListener('mouseleave', function() {
+          this.classList.remove('shadow-xl');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
